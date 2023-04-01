@@ -1,7 +1,8 @@
 package com.example;
 
+import java.util.List;
+
 public interface IFeline {
-    void getKittens();
-    void doesHaveMane();
-    void getFood();
+    int getKittens();
+    List<String> getFood();
 }
