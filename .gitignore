@@ -1,1 +1,6 @@
 .idea
+/shelf/
+/workspace.xml
+.build
+target
+.DS_Store
