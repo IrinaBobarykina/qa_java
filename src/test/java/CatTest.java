@@ -6,7 +6,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+
 import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -17,12 +19,12 @@ public class CatTest {
     Feline feline;
 
     @Before
-    public void createFeline (){
+    public void createFeline() {
         cat = new Cat(feline);
     }
 
     @Test
-    public void shouldBeMeow(){
+    public void shouldBeMeow() {
         String expected = "Мяу";
         assertEquals(expected, cat.getSound());
     }

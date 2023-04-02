@@ -6,8 +6,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+
 import java.util.Arrays;
 import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 import static org.mockito.MockitoAnnotations.initMocks;
 
@@ -22,23 +24,23 @@ public class LionTest {
     private String lionSex;
     private boolean hasMane;
 
-    public LionTest(String lionSex, boolean hasMane){
+    public LionTest(String lionSex, boolean hasMane) {
         this.lionSex = lionSex;
         this.hasMane = hasMane;
     }
 
     @Parameterized.Parameters
     public static List<Object[]> lionSex() {
-        return Arrays.asList(new Object[][] {
+        return Arrays.asList(new Object[][]{
                 {"Самец", true},
                 {"Самка", false},
         });
     }
 
     @Before
-    public void createLion () throws Exception {
+    public void createLion() throws Exception {
         initMocks(this);
-        lion = new Lion(lionSex,feline);
+        lion = new Lion(lionSex, feline);
     }
 
     @Test
