@@ -15,26 +15,26 @@ public class FelineTest {
     }
 
     @Test
-    public void shouldBeOneKitten() {
+    public void getKittensReturnOne() {
         int expected = 1;
         assertEquals(expected, feline.getKittens());
     }
 
     @Test
-    public void shouldBeFewKittens() {
+    public void getKittensReturnThree() {
         int expected = 3;
         int numberOfKittens = 3;
         assertEquals(expected, feline.getKittens(numberOfKittens));
     }
 
     @Test
-    public void shouldBeFeline() {
+    public void getFamilyReturnFeline() {
         String expected = "Кошачьи";
         assertEquals(expected, feline.getFamily());
     }
 
     @Test
-    public void shouldGetPredatorFood() throws Exception {
+    public void eatMeatReturnPredatorFood() throws Exception {
         List<String> expected = List.of("Животные", "Птицы", "Рыба");
         assertEquals(expected, feline.eatMeat());
     }

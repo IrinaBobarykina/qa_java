@@ -24,13 +24,13 @@ public class CatTest {
     }
 
     @Test
-    public void shouldBeMeow() {
+    public void getSoundReturnMeow() {
         String expected = "Мяу";
         assertEquals(expected, cat.getSound());
     }
 
     @Test
-    public void shouldGetPredatorFood() throws Exception {
+    public void getFoodReturnPredatorFood() throws Exception {
         List<String> expected = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(cat.getFood()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         assertEquals(expected, cat.getFood());

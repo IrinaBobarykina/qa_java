@@ -23,19 +23,19 @@ public class AlexTest {
     }
 
     @Test
-    public void shouldBeListOfFriends() {
+    public void getFriendsReturnListOfAnimals() {
         List<String> expected = List.of("Марти", "Глория", "Мелман");
         assertEquals(expected, alex.getFriends());
     }
 
     @Test
-    public void shouldBeNewYorkZoo() {
+    public void getPlaceOfLivingReturnNewYorkZoo() {
         String expected = "Нью-Йоркский зоопарк";
         assertEquals(expected, alex.getPlaceOfLiving());
     }
 
     @Test
-    public void shouldHaveZeroKitten() {
+    public void getKittensReturnZero() {
         int expected = 0;
         assertEquals(expected, alex.getKittens());
     }
