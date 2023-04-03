@@ -10,6 +10,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LionTest {
@@ -24,9 +25,10 @@ public class LionTest {
         lion = new Lion("Самец", feline);
     }
 
-    @Test(expected = Exception.class)
-    public void shouldReturnException() throws Exception {
-        lion = new Lion("йцукен", feline);
+    @Test
+    public void shouldReturnException() {
+        Exception exception = assertThrows(Exception.class, () -> new Lion("йцукен", feline));
+        assertEquals("Используйте допустимые значения пола животного - самей или самка", exception.getMessage());
     }
 
     @Test
